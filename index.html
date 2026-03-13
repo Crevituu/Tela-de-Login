@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+
+    <!-- React 18 -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- Babel: compila TypeScript + JSX no browser -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- CSS separado -->
+    <link rel="stylesheet" href="src/LoginPage.css" />
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <!--
+      Ordem de carregamento:
+        1. types.ts   → interfaces TypeScript
+        2. LoginPage.tsx → componente principal
+        3. index.tsx  → monta o React na div#root
+    -->
+    <script type="text/babel" data-presets="react,typescript" src="src/types.ts"></script>
+    <script type="text/babel" data-presets="react,typescript" src="src/LoginPage.tsx"></script>
+    <script type="text/babel" data-presets="react,typescript" src="src/index.tsx"></script>
+  </body>
+</html>
